@@ -56,11 +56,11 @@ else
     echo "----------------------------------------"
 
     cd /tmp
-    curl -O https://fren-build-resources.s3.amazonaws.com/${OS}/fren-${OS}-dependencies.tar.gz
-    curl -O https://fren-build-resources.s3.amazonaws.com/${OS}/SHASUM
+    curl -O https://pepe-build-resources.s3.amazonaws.com/${OS}/pepe-${OS}-dependencies.tar.gz
+    curl -O https://pepe-build-resources.s3.amazonaws.com/${OS}/SHASUM
     if [[ $(sha256sum -c /tmp/SHASUM) ]]; then
         cd ${GITHUB_WORKSPACE}/depends
-        tar zxvf /tmp/fren-${OS}-dependencies.tar.gz
+        tar zxvf /tmp/pepe-${OS}-dependencies.tar.gz
     else
         echo "SHASUM doesn't match"
         exit 1
